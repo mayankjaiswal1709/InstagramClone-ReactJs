@@ -12,12 +12,17 @@ import SlowMotionVideoIcon from '@mui/icons-material/SlowMotionVideo';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import AddIcon from '@mui/icons-material/Add';
+import DensityMediumIcon from "@mui/icons-material/DensityMedium";
+import FacebookIcon from "@mui/icons-material/Facebook";
 import PersonIcon from '@mui/icons-material/Person';
 import { Add } from '@material-ui/icons';
+
 const Sidebar = () => {
   return (
-    <div style={{display:"flex", alignContent:"flex-end",marginTop: "225px"}}>
-      <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" }  }}>
+    <div 
+      style={{  marginTop: "225px" }}
+    >
+      <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
         <Box sx={{ position: "fixed" }}>
           <List>
             <ListItem disablePadding>
@@ -28,7 +33,6 @@ const Sidebar = () => {
                 <ListItemText primary="Home" />
               </ListItemButton>
             </ListItem>
-
             <ListItem disablePadding>
               <ListItemButton conponent="a" href="#home">
                 <ListItemIcon>
@@ -37,7 +41,6 @@ const Sidebar = () => {
                 <ListItemText primary="Search" />
               </ListItemButton>
             </ListItem>
-
             <ListItem disablePadding>
               <ListItemButton conponent="a" href="#home">
                 <ListItemIcon>
@@ -46,7 +49,6 @@ const Sidebar = () => {
                 <ListItemText primary="Explore" />
               </ListItemButton>
             </ListItem>
-
             <ListItem disablePadding>
               <ListItemButton conponent="a" href="#home">
                 <ListItemIcon>
@@ -55,7 +57,6 @@ const Sidebar = () => {
                 <ListItemText primary="Reels" />
               </ListItemButton>
             </ListItem>
-
             <ListItem disablePadding>
               <ListItemButton conponent="a" href="#home">
                 <ListItemIcon>
@@ -64,7 +65,6 @@ const Sidebar = () => {
                 <ListItemText primary="Messages" />
               </ListItemButton>
             </ListItem>
-
             <ListItem disablePadding>
               <ListItemButton conponent="a" href="#home">
                 <ListItemIcon>
@@ -73,7 +73,6 @@ const Sidebar = () => {
                 <ListItemText primary="Notification" />
               </ListItemButton>
             </ListItem>
-
             <ListItem disablePadding>
               <ListItemButton conponent="a" href="#home">
                 <ListItemIcon>
@@ -82,13 +81,32 @@ const Sidebar = () => {
                 <ListItemText primary="Create" />
               </ListItemButton>
             </ListItem>
-
             <ListItem disablePadding>
               <ListItemButton conponent="a" href="#home">
                 <ListItemIcon>
                   <PersonIcon />
                 </ListItemIcon>
                 <ListItemText primary="Profile" />
+              </ListItemButton>
+            </ListItem>
+          </List>
+
+          <List style={{}}>
+            <ListItem disablePadding>
+              <ListItemButton conponent="a" href="#home">
+                <ListItemIcon>
+                  <FacebookIcon />
+                </ListItemIcon>
+                <ListItemText primary="Facebook" />
+              </ListItemButton>
+            </ListItem>
+
+            <ListItem disablePadding>
+              <ListItemButton conponent="a" href="#home">
+                <ListItemIcon>
+                  <DensityMediumIcon />
+                </ListItemIcon>
+                <ListItemText primary="More" />
               </ListItemButton>
             </ListItem>
           </List>

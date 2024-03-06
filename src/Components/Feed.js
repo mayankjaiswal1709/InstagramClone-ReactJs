@@ -23,125 +23,136 @@ import SendIcon from "@mui/icons-material/Send";
 import ChatBubbleSharpIcon from "@mui/icons-material/ChatBubbleSharp";
 import ChatBubbleOutlineRoundedIcon from "@mui/icons-material/ChatBubbleOutlineRounded";
 import BookmarkBorderRoundedIcon from "@mui/icons-material/BookmarkBorderRounded";
+import Story from "./topBar";
+
+
 const Feed = () => {
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      p={2}
-      flex={4}
-    >
-      <Card
-        sx={{
-          width: { xs: "100%", md: "50%" },
-          marginBottom: "25px",
-          marginTop: "125px",
-        }}
-      >
-        <CardHeader
-          avatar={
-            <Avatar sx={{ bgcolor: "orange" }} aria-label="recipe">
-              M
-            </Avatar>
-          }
-          action={
-            <IconButton aria-label="settings">
-              <MoreVertIcon />
-            </IconButton>
-          }
-          title="Mayank jaiswal"
-          subheader="Mandav, Madhya Pradesh"
-        />
-        <CardMedia
-          component="img"
-          height="400px"
-          image={mj}
-          alt="Paella dish"
-        />
-        <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
-          <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <Checkbox
-                icon={<FavoriteBorder />}
-                checkedIcon={<Favorite sx={{ color: "red" }} />}
-              />
-            </IconButton>
-            <IconButton aria-label="send">
-              <ChatBubbleOutlineRoundedIcon sx={{ color: "black" }} />
-            </IconButton>
-            <IconButton aria-label="share">
-              <SendIcon sx={{ color: "black" }} />
-            </IconButton>
-          </CardActions>
-          <CardActions>
-            <IconButton aria-label="bookmark">
-              <BookmarkBorderRoundedIcon />
-            </IconButton>
-          </CardActions>
-        </CardActions>
-        <CardContent>
-          <Typography variant="body2" color="text.secondary">
-            My first post 😁💫😍
-          </Typography>
-        </CardContent>
-      </Card>
+    <div>
+      <Story />
 
-      <Card
-        sx={{
-          width: { xs: "100%", md: "50%", lg: "12" },
-          marginBottom: "25px",
-        }}
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        p={2}
+        flex={4}
       >
-        <CardHeader
-          avatar={
-            <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
-              J
-            </Avatar>
-          }
-          action={
-            <IconButton aria-label="settings">
-              <MoreVertIcon />
-            </IconButton>
-          }
-          title="Jai Shree mahakal "
-          subheader="Mahakaleshwar Jyotirlinga"
-        />
-        <CardMedia
-          component="img"
-          height="400px"
-          image={imgd}
-          alt="Paella dish"
-        />
+        <Card
+          sx={{
+            width: { xs: "100%", md: "50%" },
+            marginBottom: "25px",
+            marginTop: "25px",
+          }}
+        >
+          <CardHeader
+            avatar={
+              <Avatar sx={{ bgcolor: "orange" }} aria-label="recipe">
+                M
+              </Avatar>
+            }
+            action={
+              <IconButton aria-label="settings">
+                <MoreVertIcon />
+              </IconButton>
+            }
+            title="Mayank jaiswal"
+            subheader="Mandav, Madhya Pradesh"
+          />
+          <CardMedia
+            component="img"
+            height="400px"
+            image={mj}
+            alt="Paella dish"
+          />
+          <CardActions
+            sx={{ display: "flex", justifyContent: "space-between" }}
+          >
+            <CardActions disableSpacing>
+              <IconButton aria-label="add to favorites">
+                <Checkbox
+                  icon={<FavoriteBorder />}
+                  checkedIcon={<Favorite sx={{ color: "red" }} />}
+                />
+              </IconButton>
+              <IconButton aria-label="send">
+                <ChatBubbleOutlineRoundedIcon sx={{ color: "black" }} />
+              </IconButton>
+              <IconButton aria-label="share">
+                <SendIcon sx={{ color: "black" }} />
+              </IconButton>
+            </CardActions>
+            <CardActions>
+              <IconButton aria-label="bookmark">
+                <BookmarkBorderRoundedIcon />
+              </IconButton>
+            </CardActions>
+          </CardActions>
+          <CardContent>
+            <Typography variant="body2" color="text.primary">
+              My first post 😁💫😍
+            </Typography>
+          </CardContent>
+        </Card>
 
-        <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
-          <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <Checkbox
-                icon={<FavoriteBorder />}
-                checkedIcon={<Favorite sx={{ color: "red" }} />}
-              />
-            </IconButton>
-            <IconButton aria-label="send">
-              <ChatBubbleOutlineRoundedIcon sx={{ color: "black" }} />
-            </IconButton>
-            <IconButton aria-label="share">
-              <SendIcon sx={{ color: "black" }} />
-            </IconButton>
+        <Card
+          sx={{
+            width: { xs: "100%", md: "50%", lg: "12" },
+            marginBottom: "25px",
+          }}
+        >
+          <CardHeader
+            avatar={
+              <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
+                J
+              </Avatar>
+            }
+            action={
+              <IconButton aria-label="settings">
+                <MoreVertIcon />
+              </IconButton>
+            }
+            title="Jai Shree mahakal "
+            subheader="Mahakaleshwar Jyotirlinga"
+          />
+          <CardMedia
+            component="img"
+            height="400px"
+            image={imgd}
+            alt="Paella dish"
+          />
+
+          <CardActions
+            sx={{ display: "flex", justifyContent: "space-between" }}
+          >
+            <CardActions disableSpacing>
+              <IconButton aria-label="add to favorites">
+                <Checkbox
+                  icon={<FavoriteBorder />}
+                  checkedIcon={<Favorite sx={{ color: "red" }} />}
+                />
+              </IconButton>
+              <IconButton aria-label="send">
+                <ChatBubbleOutlineRoundedIcon sx={{ color: "black" }} />
+              </IconButton>
+              <IconButton aria-label="share">
+                <SendIcon sx={{ color: "black" }} />
+              </IconButton>
+            </CardActions>
+            <CardActions>
+              <IconButton aria-label="bookmark">
+                <BookmarkBorderRoundedIcon />
+              </IconButton>
+            </CardActions>
           </CardActions>
-          <CardActions>
-            <IconButton aria-label="bookmark">
-              <BookmarkBorderRoundedIcon />
-            </IconButton>
-          </CardActions>
-        </CardActions>
-        <CardContent>
-          <Typography variant="body2" color="text.secondary">
-            जय श्री महाकाल 🙏❤️
-          </Typography>
-        </CardContent>
-      </Card>
-    </Box>
+          <CardContent>
+            <Typography variant="body2" color="text.primary">
+              जय श्री महाकाल 🙏❤️
+            </Typography>
+          </CardContent>
+        </Card>
+      </Box>
+    </div>
   );
 };
 
