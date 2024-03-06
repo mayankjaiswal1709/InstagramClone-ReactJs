@@ -1,5 +1,9 @@
 import React from "react";
-import { Box, Avatar, Button, Typography } from "@mui/material";
+import { Box, Avatar, Typography } from "@mui/material";
+import mj from "../../src/Images/mandav_Mayank.jpg";
+import imgd from "../../src/Images/imgd.jpg";
+import zuck from "../../src/Images/zuck.jpg";
+
 
 const UserSuggestion = ({ name, username, imageUrl }) => (
   <Box
@@ -33,15 +37,16 @@ const Rightbar = () => {
       username: "mayankjaiswal",
       imageUrl: "mayank.jpg",
     },
-    { name: "Oyeee Chote", username: "oyeee.chote", imageUrl: "oyeechote.jpg" },
-    { name: "Mark zuckerberg", username: "zuck", imageUrl: "zuck.jpg" },
-    { name: "Oyeee Chote", username: "oyeee.chote", imageUrl: "oyeechote.jpg" },
-    { name: "Oyeee Chote", username: "oyeee.chote", imageUrl: "oyeechote.jpg" },
-    { name: "Oyeee Chote", username: "oyeee.chote", imageUrl: "oyeechote.jpg" },
+    { name: "Oyeee Chote", username: "oyeee.chote", imageUrl: mj },
+    { name: "Mark zuckerberg", username: "zuck", imageUrl: zuck },
+    { name: "MS Tech", username: "mstech", imageUrl: imgd },
+    { name: "Indore", username: "indoreviral", imageUrl: "davviips.jpg" },
+
   ];
 
   return (
     <Box
+    marginTop={"25"}
     //   bgcolor="gray"
       flex={1}
       p={1}

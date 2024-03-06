@@ -1,4 +1,8 @@
 import React from "react";
+import mj from "../../src/Images/mandav_Mayank.jpg";
+import imgd from "../../src/Images/imgd.jpg";
+import zuck from "../../src/Images/zuck.jpg";
+
 
 const UserProfile = ({ username, imageSrc }) => (
   <div
@@ -37,15 +41,14 @@ const UserProfile = ({ username, imageSrc }) => (
 const StorySection = () => {
 
   const users = [
-    { username: "user1", imageSrc: "mj.jpg" },
-    { username: "user2", imageSrc: "user2.jpg" },
-    { username: "user3", imageSrc: "user3.jpg" },
+    { username: "user1", imageSrc: mj },
+    { username: "user2", imageSrc: imgd },
+    { username: "user3", imageSrc: zuck },
     { username: "user4", imageSrc: "user4.jpg" },
     { username: "user5", imageSrc: "user5.jpg" },
     { username: "user6", imageSrc: "user6.jpg" },
     { username: "user7", imageSrc: "user7.jpg" },
     { username: "user8", imageSrc: "user8.jpg" },
-   
   ];
 
   return (

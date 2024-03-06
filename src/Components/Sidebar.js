@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, dividerClasses} from '@mui/material'
+import {Box,} from '@mui/material'
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -15,7 +15,6 @@ import AddIcon from '@mui/icons-material/Add';
 import DensityMediumIcon from "@mui/icons-material/DensityMedium";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PersonIcon from '@mui/icons-material/Person';
-import { Add } from '@material-ui/icons';
 
 const Sidebar = () => {
   return (

@@ -11,10 +11,10 @@ const App = () => {
 
   return (
     <Box>
-      <Stack direction="row" spacing={2} justify-content="space-between">
+      <Stack direction="row" >
         <Sidebar />
         <Feed />
-        <Rightbar/>
+        <Rightbar />
       </Stack>
     </Box>
   );
