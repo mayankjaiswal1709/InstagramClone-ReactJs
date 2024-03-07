@@ -46,9 +46,7 @@ const StorySection = () => {
     { username: "user3", imageSrc: zuck },
     { username: "user4", imageSrc: "user4.jpg" },
     { username: "user5", imageSrc: "user5.jpg" },
-    { username: "user6", imageSrc: "user6.jpg" },
-    { username: "user7", imageSrc: "user7.jpg" },
-    { username: "user8", imageSrc: "user8.jpg" },
+   
   ];
 
   return (

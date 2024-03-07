@@ -1,118 +1,79 @@
-import React from 'react'
-import {Box,} from '@mui/material'
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import HomeIcon from '@mui/icons-material/Home';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import SearchIcon from '@mui/icons-material/Search';
-import ExploreIcon from '@mui/icons-material/Explore';
-import SlowMotionVideoIcon from '@mui/icons-material/SlowMotionVideo';
-import TelegramIcon from '@mui/icons-material/Telegram';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import AddIcon from '@mui/icons-material/Add';
-import DensityMediumIcon from "@mui/icons-material/DensityMedium";
+import React from "react";
+import {
+  Box,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+} from "@mui/material";
+import HomeIcon from "@mui/icons-material/Home";
+import SearchIcon from "@mui/icons-material/Search";
+import ExploreIcon from "@mui/icons-material/Explore";
+import SlowMotionVideoIcon from "@mui/icons-material/SlowMotionVideo";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import AddIcon from "@mui/icons-material/Add";
+import PersonIcon from "@mui/icons-material/Person";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import PersonIcon from '@mui/icons-material/Person';
+import DensityMediumIcon from "@mui/icons-material/DensityMedium";
 
 const Sidebar = () => {
+  const darkIconColor = "#333"; // Adjust the color as needed
+
   return (
-    <div 
-      style={{  marginTop: "225px" }}
+    <Box
+      sx={{
+        borderRight: { xs: 0, sm: "1px solid #ccc" },
+        padding: 2,
+        height: "100%", // Ensure the sidebar takes full height
+        marginLeft: "1%", // Set margin to 1%
+        position: "fixed",
+        left: 0,
+      }}
     >
-      <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
-        <Box sx={{ position: "fixed" }}>
-          <List>
-            <ListItem disablePadding>
-              <ListItemButton conponent="a" href="#home">
-                <ListItemIcon>
-                  <HomeIcon />
-                </ListItemIcon>
-                <ListItemText primary="Home" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton conponent="a" href="#home">
-                <ListItemIcon>
-                  <SearchIcon />
-                </ListItemIcon>
-                <ListItemText primary="Search" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton conponent="a" href="#home">
-                <ListItemIcon>
-                  <ExploreIcon />
-                </ListItemIcon>
-                <ListItemText primary="Explore" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton conponent="a" href="#home">
-                <ListItemIcon>
-                  <SlowMotionVideoIcon />
-                </ListItemIcon>
-                <ListItemText primary="Reels" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton conponent="a" href="#home">
-                <ListItemIcon>
-                  <TelegramIcon />
-                </ListItemIcon>
-                <ListItemText primary="Messages" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton conponent="a" href="#home">
-                <ListItemIcon>
-                  <FavoriteBorderIcon />
-                </ListItemIcon>
-                <ListItemText primary="Notification" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton conponent="a" href="#home">
-                <ListItemIcon>
-                  <AddIcon />
-                </ListItemIcon>
-                <ListItemText primary="Create" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton conponent="a" href="#home">
-                <ListItemIcon>
-                  <PersonIcon />
-                </ListItemIcon>
-                <ListItemText primary="Profile" />
-              </ListItemButton>
-            </ListItem>
-          </List>
+      <List>
+        {[
+          { icon: <HomeIcon sx={{ color: darkIconColor }} />, text: "Home" },
+          { icon: <SearchIcon sx={{ color: darkIconColor }} />, text: "Search" },
+          { icon: <ExploreIcon sx={{ color: darkIconColor }} />, text: "Explore" },
+          { icon: <SlowMotionVideoIcon sx={{ color: darkIconColor }} />, text: "Reels" },
+          { icon: <TelegramIcon sx={{ color: darkIconColor }} />, text: "Messages" },
+          { icon: <FavoriteBorderIcon sx={{ color: darkIconColor }} />, text: "Notification" },
+          { icon: <AddIcon sx={{ color: darkIconColor }} />, text: "Create" },
+          { icon: <PersonIcon sx={{ color: darkIconColor }} />, text: "Profile" },
+        ].map((item, index) => (
+          <ListItem key={index} disablePadding>
+            <ListItemButton component="a" href={`#${item.text.toLowerCase()}`}>
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText primary={item.text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
 
-          <List style={{}}>
-            <ListItem disablePadding>
-              <ListItemButton conponent="a" href="#home">
-                <ListItemIcon>
-                  <FacebookIcon />
-                </ListItemIcon>
-                <ListItemText primary="Facebook" />
-              </ListItemButton>
-            </ListItem>
+      <Box sx={{ marginTop: "auto" }}>
+        <Typography variant="h6" mb={2}>
+          Discover
+        </Typography>
 
-            <ListItem disablePadding>
-              <ListItemButton conponent="a" href="#home">
-                <ListItemIcon>
-                  <DensityMediumIcon />
-                </ListItemIcon>
-                <ListItemText primary="More" />
+        <List>
+          {[
+            { icon: <FacebookIcon sx={{ color: darkIconColor }} />, text: "Facebook" },
+            { icon: <DensityMediumIcon sx={{ color: darkIconColor }} />, text: "More" },
+          ].map((item, index) => (
+            <ListItem key={index} disablePadding>
+              <ListItemButton component="a" href={`#${item.text.toLowerCase()}`}>
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText primary={item.text} />
               </ListItemButton>
             </ListItem>
-          </List>
-        </Box>
+          ))}
+        </List>
       </Box>
-    </div>
+    </Box>
   );
-}
+};
 
-export default Sidebar
+export default Sidebar;

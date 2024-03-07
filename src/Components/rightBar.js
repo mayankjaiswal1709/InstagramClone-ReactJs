@@ -4,7 +4,6 @@ import mj from "../../src/Images/mandav_Mayank.jpg";
 import imgd from "../../src/Images/imgd.jpg";
 import zuck from "../../src/Images/zuck.jpg";
 
-
 const UserSuggestion = ({ name, username, imageUrl }) => (
   <Box
     display="flex"
@@ -13,6 +12,7 @@ const UserSuggestion = ({ name, username, imageUrl }) => (
     p={2}
     borderRadius={1}
     bgcolor="#ffffff"
+    marginTop={2}
   >
     <Avatar src={imageUrl} alt={username} />
     <Box ml={2}>
@@ -22,7 +22,7 @@ const UserSuggestion = ({ name, username, imageUrl }) => (
       </Typography>
     </Box>
     <Box ml="auto">
-      <Typography variant="contained" color="primary">
+      <Typography variant="body2" color="primary">
         Follow
       </Typography>
     </Box>
@@ -30,31 +30,30 @@ const UserSuggestion = ({ name, username, imageUrl }) => (
 );
 
 const Rightbar = () => {
-
   const userSuggestions = [
     {
       name: "Mayank Jaiswal",
       username: "mayankjaiswal",
-      imageUrl: "mayank.jpg",
+      imageUrl: mj,
     },
-    { name: "Oyeee Chote", username: "oyeee.chote", imageUrl: mj },
-    { name: "Mark zuckerberg", username: "zuck", imageUrl: zuck },
+    { name: "Oyeee Chote", username: "oyeee.chote", imageUrl: "oyeechote.jpg" },
+    { name: "Mark Zuckerberg", username: "zuck", imageUrl: zuck },
     { name: "MS Tech", username: "mstech", imageUrl: imgd },
-    { name: "Indore", username: "indoreviral", imageUrl: "davviips.jpg" },
-
+    { name: "Indore Viral", username: "indoreviral", imageUrl: "indore.jpg" },
   ];
 
   return (
     <Box
-    marginTop={"25"}
-    //   bgcolor="gray"
+      marginTop={25}
       flex={1}
       p={1}
-      sx={{
-        display: { xs: "none", sm: "block" },
-        maxWidth: "470px", 
-      }}
+      sx={{ display: { xs: "none", sm: "block" }, maxWidth: "470px" }}
     >
+      <Box mt={2}>
+        <Typography variant="body2" color="textSecondary">
+          <strong>See All Suggestions</strong>
+        </Typography>
+      </Box>
       {userSuggestions.map((user, index) => (
         <UserSuggestion key={index} {...user} />
       ))}
